@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>绳师48号测试-绳缚技术能力自评与等级参考指南</title>
+<meta name="description" content="绳师48号测试是一套用于绳缚爱好者自评技术熟练度与安全意识的参考体系。本页介绍测试的起源背景、等级划分逻辑、自评维度、常见问题与练习建议，帮助你在安全、理性的前提下了解自身水平。">
+<meta name="keywords" content="绳师48号测试,绳师等级测试,绳缚技术自评,绳艺安全,绳缚练习指南">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1a22;
+  --ink-2:#3a3546;
+  --muted:#6b6478;
+  --line:#e3dfe9;
+  --bg:#f7f5fa;
+  --panel:#ffffff;
+  --accent:#7a3f8f;
+  --accent-2:#b06fc4;
+  --accent-soft:#f1e6f6;
+  --warm:#c9803a;
+  --warm-soft:#fbf1e4;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(40,24,60,.07);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%;}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:linear-gradient(120deg,#241a2e 0%,#3d2a4d 55%,#5a3a6b 100%);
+  color:#f3ecf8;
+  padding:10px 0;
+  font-size:13.5px;
+}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.topbar span{opacity:.85;}
+.topbar .tagline{color:#e0c9ec;}
+
+header.site-head{
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.wrap{
+  width:min(1180px,92%);
+  margin:0 auto;
+}
+.head-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .mark{
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff;display:grid;place-items:center;
+  font-weight:700;font-size:19px;letter-spacing:.5px;
+  flex:none;
+}
+.brand .name{font-size:19px;font-weight:700;letter-spacing:.3px;}
+.brand .sub{font-size:12.5px;color:var(--muted);letter-spacing:.5px;}
+nav.main-nav ul{
+  display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;
+}
+nav.main-nav a{
+  display:block;padding:8px 14px;border-radius:999px;
+  color:var(--ink-2);font-size:14.5px;
+}
+nav.main-nav a:hover{background:var(--accent-soft);color:var(--accent);text-decoration:none;}
+nav.main-nav a.active{background:var(--accent);color:#fff;}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(176,111,196,.28),transparent 60%),
+    radial-gradient(700px 320px at 6% 110%,rgba(201,128,58,.16),transparent 65%),
+    linear-gradient(160deg,#2a1d35 0%,#3b2849 60%,#4a3059 100%);
+  color:#f6f1fa;
+  padding:56px 0 60px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.35fr .95fr;
+  gap:44px;
+  align-items:start;
+}
+.hero .kicker{
+  display:inline-block;
+  font-size:12.5px;letter-spacing:2px;
+  padding:5px 12px;border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  color:#e8d6f2;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(26px,3.4vw,40px);
+  line-height:1.32;
+  margin:0 0 16px;
+  letter-spacing:.5px;
+}
+.hero p.lead{
+  font-size:16.5px;
+  color:#ded2e8;
+  margin:0 0 24px;
+  max-width:62ch;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:600;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:.2s;
+}
+.btn-primary{background:var(--accent-2);color:#fff;}
+.btn-primary:hover{background:#c184d4;text-decoration:none;}
+.btn-ghost{background:transparent;color:#f0e6f6;border-color:rgba(255,255,255,.35);}
+.btn-ghost:hover{background:rgba(255,255,255,.12);text-decoration:none;}
+
+.hero-panel{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);
+  padding:22px 22px 18px;
+  backdrop-filter:blur(4px);
+}
+.hero-panel h2{
+  font-size:15px;margin:0 0 14px;color:#f0e3f7;letter-spacing:1px;font-weight:600;
+}
+.dim-list{list-style:none;margin:0;padding:0;}
+.dim-list li{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.14);
+  font-size:14.5px;color:#e2d7ec;
+}
+.dim-list li:last-child{border-bottom:none;}
+.dim-list .num{
+  flex:none;width:24px;height:24px;border-radius:7px;
+  background:rgba(255,255,255,.16);
+  display:grid;place-items:center;font-size:12.5px;font-weight:700;color:#fff;
+}
+
+/* ---------- 通用区块 ---------- */
+section{padding:56px 0;}
+.section-head{margin-bottom:30px;}
+.section-head .eyebrow{
+  font-size:12.5px;letter-spacing:2.4px;color:var(--accent);
+  text-transform:uppercase;font-weight:700;
+}
+.section-head h2{
+  font-size:clamp(21px,2.4vw,27px);
+  margin:8px 0 10px;
+  letter-spacing:.4px;
+}
+.section-head p{margin:0;color:var(--muted);max-width:78ch;font-size:15.5px;}
+.alt-bg{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+/* ---------- 等级表 ---------- */
+.level-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+.level-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.level-card::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:4px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));
+}
+.level-card h3{
+  margin:0 0 6px;font-size:17px;display:flex;align-items:center;gap:9px;
+}
+.level-card .badge{
+  font-size:11.5px;font-weight:700;letter-spacing:.6px;
+  background:var(--accent-soft);color:var(--accent);
+  padding:3px 9px;border-radius:999px;
+}
+.level-card p{margin:8px 0 0;font-size:14.5px;color:var(--ink-2);}
+.level-card ul{margin:12px 0 0;padding-left:18px;font-size:14px;color:var(--muted);}
+.level-card ul li{margin-bottom:4px;}
+
+/* ---------- 内容双栏 ---------- */
+.split{
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:38px;
+  align-items:start;
+}
+.prose h3{font-size:18.5px;margin:26px 0 10px;}
+.prose h3:first-child{margin-top:0;}
+.prose p{margin:0 0 14px;color:var(--ink-2);}
+.prose ul,.prose ol{padding-left:20px;color:var(--ink-2);}
+.prose li{margin-bottom:7px;}
+
+.side-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+  margin-bottom:20px;
+}
+.side-card h3{
+  margin:0 0 14px;font-size:16px;letter-spacing:.4px;
+  padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.checklist{list-style:none;margin:0;padding:0;font-size:14.5px;}
+.checklist li{
+  display:flex;gap:10px;padding:8px 0;color:var(--ink-2);
+  border-bottom:1px dashed var(--line);
+}
+.checklist li:last-child{border-bottom:none;}
+.checklist .dot{
+  flex:none;width:18px;height:18px;border-radius:5px;margin-top:3px;
+  background:var(--warm-soft);color:var(--warm);
+  display:grid;place-items:center;font-size:11px;font-weight:700;
+}
+
+/* ---------- 维度卡片 ---------- */
+.dim-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
+.dim-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  box-shadow:var(--shadow);
+}
+.dim-card .icon{
+  width:40px;height:40px;border-radius:11px;
+  background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;font-size:18px;font-weight:700;
+  margin-bottom:14px;
+}
+.dim-card h3{margin:0 0 8px;font-size:16.5px;}
+.dim-card p{margin:0;font-size:14.5px;color:var(--muted);}
+
+/* ---------- 步骤 ---------- */
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps li{
+  position:relative;
+  padding:0 0 26px 58px;
+  counter-increment:step;
+}
+.steps li::before{
+  content:counter(step);
+  position:absolute;left:0;top:0;
+  width:38px;height:38px;border-radius:11px;
+  background:var(--panel);border:1px solid var(--line);
+  color:var(--accent);font-weight:700;
+  display:grid;place-items:center;
+  box-shadow:var(--shadow);
+}
+.steps li::after{
+  content:"";position:absolute;left:19px;top:44px;bottom:6px;width:1px;
+  background:var(--line);
+}
+.steps li:last-child{padding-bottom:0;}
+.steps li:last-child::after{display:none;}
+.steps h3{margin:4px 0 8px;font-size:16.5px;}
+.steps p{margin:0;color:var(--muted);font-size:14.5px;}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:grid;gap:12px;}
+details.faq{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:0 20px;
+  box-shadow:var(--shadow);
+}
+details.faq summary{
+  cursor:pointer;
+  list-style:none;
+  padding:17px 0;
+  font-weight:600;
+  font-size:15.5px;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{
+  content:"+";
+  font-size:20px;color:var(--accent);font-weight:400;flex:none;
+  transition:.2s;
+}
+details.faq[open] summary::after{content:"−";}
+details.faq .answer{
+  padding:0 0 18px;
+  color:var(--ink-2);
+  font-size:14.8px;
+  border-top:1px dashed var(--line);
+  padding-top:14px;
+  margin-top:-2px;
+}
+
+/* ---------- 提示条 ---------- */
+.notice{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--warm-soft);
+  border:1px solid #f0dcc2;
+  border-left:4px solid var(--warm);
+  border-radius:12px;
+  padding:18px 20px;
+  font-size:14.6px;
+  color:#6a4a22;
+}
+.notice strong{color:#8a5a1f;}
+.notice .n-icon{
+  flex:none;width:26px;height:26px;border-radius:8px;
+  background:#f3ddc0;color:#8a5a1f;
+  display:grid;place-items:center;font-weight:700;font-size:14px;
+}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+  background:#241a2e;
+  color:#c9bdd6;
+  padding:44px 0 26px;
+  font-size:14px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:30px;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.foot-grid h4{
+  color:#f2e9f8;font-size:14.5px;margin:0 0 14px;letter-spacing:.6px;
+}
+.foot-grid ul{list-style:none;margin:0;padding:0;}
+.foot-grid li{margin-bottom:9px;}
+.foot-grid a{color:#c9bdd6;font-size:13.8px;}
+.foot-grid a:hover{color:#fff;}
+.foot-about p{margin:0;font-size:13.8px;line-height:1.8;color:#b3a6c2;}
+.foot-bottom{
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  padding-top:20px;font-size:13px;color:#9c8fae;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .split{grid-template-columns:1fr;gap:28px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.4px;}
+  section{padding:42px 0;}
+  .hero{padding:40px 0 44px;}
+  .head-inner{padding:12px 0;}
+  nav.main-nav ul{gap:4px;}
+  nav.main-nav a{padding:7px 11px;font-size:13.8px;}
+  .foot-grid{grid-template-columns:1fr;gap:22px;}
+  .steps li{padding-left:50px;}
+  .steps li::before{width:34px;height:34px;}
+  .steps li::after{left:17px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>绳缚技术自评参考 · 强调安全与共识</span>
+    <span class="tagline">本页内容仅供成年爱好者在合法合规前提下参考</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <div class="mark">48</div>
+      <div>
+        <div class="name">绳师48号测试</div>
+        <div class="sub">技术自评 · 等级参考 · 安全指南</div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro" class="active">测试概览</a></li>
+        <li><a href="#levels">等级参考</a></li>
+        <li><a href="#dimensions">自评维度</a></li>
+        <li><a href="#howto">自测流程</a></li>
+        <li><a href="#safety">安全须知</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="intro">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">SELF-ASSESSMENT REFERENCE</span>
+        <h1>绳师48号测试：用一套自评框架，看清自己的绳缚技术处在哪个阶段</h1>
+        <p class="lead">
+          “绳师48号测试”在绳缚爱好者圈子里常被用来指代一种技术自评思路——通过若干项能力维度给自己打分，对照等级区间判断熟练度，并据此决定下一步该练什么、哪些地方还不能碰。它不是官方认证，也不是比赛评分表，而是一份帮助练习者保持清醒、避免高估自己的对照工具。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#levels">查看等级参考区间</a>
+          <a class="btn btn-ghost" href="#dimensions">了解自评维度</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <h2>自评前先确认四件事</h2>
+        <ul class="dim-list">
+          <li><span class="num">1</span><span>参与者均为知情同意的成年人，事前沟通清楚边界与中止方式。</span></li>
+          <li><span class="num">2</span><span>手边备有安全剪等快速解脱工具，并放在可立即取到的位置。</span></li>
+          <li><span class="num">3</span><span>了解基本的人体风险区域，不在无把握的位置施加持续压迫。</span></li>
+          <li><span class="num">4</span><span>清楚自评结果只是参考，不能替代系统学习与线下指导。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 概览 -->
+  <section>
+    <div class="wrap split">
+      <div class="prose">
+        <div class="section-head">
+          <div class="eyebrow">Overview</div>
+          <h2>这套“测试”到底是什么</h2>
+        </div>
+        <h3>它不是考试，而是一面镜子</h3>
+        <p>
+          在绳缚练习中，最容易出问题的往往不是技术不够，而是自我评估失真——把看过很多视频当成会做，把会做一两个结当成掌握了整套流程。“绳师48号测试”这类自评体系的出发点，就是用一个相对结构化的清单，把模糊的“我感觉还行”拆成可以逐项回答的问题。
+        </p>
+        <p>
+          不同圈子流传的版本在题目数量、分值和等级名称上会有差异，本页不主张某一种版本是唯一标准，而是把这类自评常见的结构、逻辑和注意事项整理出来，方便你理解它、使用它，也方便你判断某个版本的题目是否合理。
+        </p>
+
+        <h3>为什么用“48”这个数字</h3>
+        <p>
+          在这类自评框架中，数字通常只是编号或题目数量的标记，并不代表官方分级，也不对应任何机构的认证编号。把它理解成“第48号自评清单”比理解成“48级”更接近实际。真正有意义的是清单里的条目，而不是标题里的数字。
+        </p>
+
+        <h3>适合谁使用</h3>
+        <ul>
+          <li>刚开始接触绳缚、想知道自己该从哪些基础练起的人；</li>
+          <li>已经练了一段时间、想确认自己是否跳过了某些环节的人；</li>
+          <li>准备与新的练习伙伴合作、需要客观说明自身水平的人；</li>
+          <li>希望建立长期练习计划、需要阶段性对照坐标的人。</li>
+        </ul>
+        <p>
+          如果你完全没有接触过绳缚，建议先补充基础安全知识，再回头看这份自评，否则很多条目会缺乏判断依据。
+        </p>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>自评时的三条原则</h3>
+          <ul class="checklist">
+            <li><span class="dot">A</span><span>按“能稳定重复完成”打分，而不是“成功过一次”。</span></li>
+            <li><span class="dot">B</span><span>按“能向别人解释清楚原理”打分，而不是“凭手感”。</span></li>
+            <li><span class="dot">C</span><span>拿不准的条目一律按低一档计，宁可低估。</span></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>常见误区</h3>
+          <ul class="checklist">
+            <li><span class="dot">×</span><span>把绳数、结数当成水平高低的标准。</span></li>
+            <li><span class="dot">×</span><span>忽略沟通与观察，只关注造型是否好看。</span></li>
+            <li><span class="dot">×</span><span>用自评结果去比较或评判他人。</span></li>
+            <li><span class="dot">×</span><span>在没有指导的情况下挑战超出能力的项目。</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 等级参考 -->
+  <section class="alt-bg" id="levels">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Levels</div>
+        <h2>等级参考区间：把分数翻译成可行动的描述</h2>
+        <p>下面是一种常见的分段方式，用于把自评总分对应到具体的练习重点。分段名称与边界并非统一标准，你可以根据自己的清单调整，重点是每段都对应明确的“能做什么”和“还不该做什么”。</p>
+      </div>
+
+      <div class="level-grid">
+        <article class="level-card">
+          <h3>入门段 <span class="badge">基础建立</span></h3>
+          <p>刚接触绳缚，重点在于熟悉绳材、基本手法和安全常识。</p>
+          <ul>
+            <li>能独立完成简单的单圈固定</li>
+            <li>知道如何快速解开与使用安全剪</li>
+            <li>练习时全程有人在场观察</li>
+          </ul>
+        </article>
+
+        <article class="level-card">
+          <h3>熟练段 <span class="badge">流程稳定</span></h3>
+          <p>可以稳定完成一套基础流程，并能在过程中保持沟通。</p>
+          <ul>
+            <li>手法连贯，松紧控制有意识</li>
+            <li>能根据对方反馈及时调整</li>
+            <li>了解常见风险区域并主动规避</li>
+          </ul>
+        </article>
+
+        <article class="level-card">
+          <h3>进阶段 <span class="badge">结构控制</span></h3>
+          <p>开始关注整体结构与受力分布，而非单个绳结。</p>
+          <ul>
+            <li>能规划一套完整造型并预判受力点</li>
+            <li>熟悉多种固定方式的适用场景</li>
+            <li>具备处理突发不适的应对流程</li>
+          </ul>
+        </article>
+
+        <article class="level-card">
+          <h3>高阶段 <span class="badge">教学与判断</span></h3>
+          <p>技术之外，更重要的是判断力与对他人安全的负责能力。</p>
+          <ul>
+            <li>能向新手清晰讲解原理与风险</li>
+            <li>能识别并纠正不规范操作</li>
+            <li>持续更新安全知识与急救常识</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice" style="margin-top:26px;">
+        <span class="n-icon">!</span>
+        <div>
+          <strong>关于分段的提醒：</strong>任何自评分段都只是练习进度的粗略坐标，不代表资质、不构成对他人的能力背书。跨段练习前，务必确认自己已具备该段位要求的全部安全能力，而不是只掌握了造型技巧。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 自评维度 -->
+  <section id="dimensions">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Dimensions</div>
+        <h2>自评通常考察的六个维度</h2>
+        <p>把技术拆成维度来打分，比笼统地问“我水平如何”更容易得到有用的答案。以下维度覆盖了大多数版本自评清单的核心内容。</p>
+      </div>
+
+      <div class="dim-grid">
+        <article class="dim-card">
+          <div class="icon">绳</div>
+          <h3>绳材与工具认知</h3>
+          <p>了解不同材质、直径与长度的适用场景，知道如何检查绳索磨损、如何保养，以及安全剪等工具的放置位置。</p>
+        </article>
+
+        <article class="dim-card">
+          <div class="icon">手</div>
+          <h3>基础手法与绳结</h3>
+          <p>能否稳定、连贯地完成常用固定与收尾手法，是否理解每个动作的目的，而不是机械模仿步骤。</p>
+        </article>
+
+        <article class="dim-card">
+          <div class="icon">力</div>
+          <h3>张力与受力控制</h3>
+          <p>能否感知并控制松紧程度，理解受力如何沿绳索分布，避免在关节、神经密集处形成持续压迫。</p>
+        </article>
+
+        <article class="dim-card">
+          <div class="icon">沟</div>
+          <h3>沟通与共识</h3>
+          <p>事前是否充分沟通边界与中止信号，过程中是否持续观察对方状态，事后是否进行复盘反馈。</p>
+        </article>
+
+        <article class="dim-card">
+          <div class="icon">安</div>
+          <h3>风险识别与应对</h3>
+          <p>了解常见的不适信号与危险征兆，知道何时必须立即停止，以及停止后应如何处理。</p>
+        </article>
+
+        <article class="dim-card">
+          <div class="icon">构</div>
+          <h3>结构设计与规划</h3>
+          <p>能否在动手前规划整体结构，预判每个环节的受力与可解性，并为突发情况预留调整空间。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 自测流程 -->
+  <section class="alt-bg" id="howto">
+    <div class="wrap split">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow">Process</div>
+          <h2>如何进行一次有效的自测</h2>
+          <p>自测的价值在于过程，而不是最后那个数字。按下面的顺序做，通常能得到更接近真实水平的结论。</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先过一遍安全知识</h3>
+            <p>在打分之前，确认自己了解基本的人体风险区域、快速解脱方式和应急处理流程。这一项不过关，后面的分数参考意义有限。</p>
+          </li>
+          <li>
+            <h3>逐项对照，如实记录</h3>
+            <p>对每个维度按“完全不会 / 需要提示 / 能独立完成 / 能讲解原理”四档记录，不要跳过拿不准的条目，拿不准本身就是信息。</p>
+          </li>
+          <li>
+            <h3>找出最低的那一项</h3>
+            <p>总分由短板决定，而不是由最高分决定。优先补足最低维度的基础内容，比继续堆高已经熟练的项目更有价值。</p>
+          </li>
+          <li>
+            <h3>设定下一阶段目标</h3>
+            <p>把最低维度拆成两到三个具体可练的小目标，并约定一个复查时间点。目标要可验证，例如“能在不提示的情况下完成某类固定”。</p>
+          </li>
+          <li>
+            <h3>定期重测并记录变化</h3>
+            <p>建议每隔一段时间重测一次，重点看变化趋势而非单次分数。如果某项长期停滞，考虑是否需要寻求线下指导。</p>
+          </li>
+        </ol>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>打分参考档位</h3>
+          <ul class="checklist">
+            <li><span class="dot">0</span><span>完全不了解，需要从头学起。</span></li>
+            <li><span class="dot">1</span><span>看过示范，需要有人在旁提示才能完成。</span></li>
+            <li><span class="dot">2</span><span>能独立完成，但速度或稳定性不足。</span></li>
+            <li><span class="dot">3</span><span>能稳定完成，并能说明关键注意点。</span></li>
+            <li><span class="dot">4</span><span>能根据不同情况调整，并向他人讲解原理。</span></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>建议的记录方式</h3>
+          <p style="margin:0;font-size:14.5px;color:var(--muted);">
+            用一张简单的表格，横向列维度、纵向列日期，每次只填档位数字。长期看下来，哪些维度在进步、哪些在原地踏步会非常直观，也方便与练习伙伴沟通自己的实际水平。
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 安全 -->
+  <section id="safety">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Safety</div>
+        <h2>安全须知：比技术等级更重要的部分</h2>
+        <p>无论自评结果落在哪一段，以下内容都是持续需要遵守的底线。技术可以慢慢练，安全没有试错空间。</p>
+      </div>
+
+      <div class="split">
+        <div class="prose">
+          <h3>关于共识与沟通</h3>
+          <p>
+            任何绳缚活动都应建立在成年人之间充分、自愿、可随时撤回的共识之上。事前明确边界、约定中止方式，过程中保持语言或非语言的状态确认，事后进行反馈交流，这些环节不应被省略，也不应因为“熟悉了”就跳过。
+          </p>
+
+          <h3>关于身体风险</h3>
+          <p>
+            人体存在若干需要特别谨慎对待的区域，包括颈部、关节附近以及神经和血管较为表浅的位置。持续压迫、突然受力或长时间维持同一姿势，都可能带来不适甚至损伤。练习中一旦出现麻木、刺痛、发凉、头晕等异常感觉，应立即停止并解开绳索，必要时寻求医疗帮助。
+          </p>
+
+          <h3>关于环境与工具</h3>
+          <p>
+            练习环境应保持整洁、温度适宜，地面做好防滑与缓冲。安全剪应始终放在伸手可及的位置，且在场所有人都知道它的位置。不要在无人知晓、无人可以协助的时间与地点进行练习。
+          </p>
+        </div>
+
+        <aside>
+          <div class="notice">
+            <span class="n-icon">!</span>
+            <div>
+              <strong>立即停止的信号：</strong>肢体麻木或刺痛、皮肤颜色异常变化、头晕恶心、呼吸不畅、对方表达不适或要求停止。出现任何一种，先解开，再判断。
+            </div>
+          </div>
+          <div class="side-card" style="margin-top:20px;">
+            <h3>练习前的检查清单</h3>
+            <ul class="checklist">
+              <li><span class="dot">✓</span><span>双方状态良好，无饮酒或影响判断的情况。</span></li>
+              <li><span class="dot">✓</span><span>安全剪就位，位置双方都清楚。</span></li>
+              <li><span class="dot">✓</span><span>中止信号已约定，且易于表达。</span></li>
+              <li><span class="dot">✓</span><span>绳索已检查，无磨损、断裂隐患。</span></li>
+              <li><span class="dot">✓</span><span>本次练习内容在能力范围之内。</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="alt-bg" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>常见问题</h2>
+        <p>以下是围绕“绳师48号测试”经常被问到的问题，回答尽量保持稳妥，不夸大也不回避。</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>绳师48号测试是官方认证吗？</summary>
+          <div class="answer">
+            不是。目前并不存在统一的官方机构为这类自评体系颁发认证。它更接近爱好者群体中流传的一种自评清单或参考框架，不同版本在题目和分段上可能不同。任何声称“通过某测试即获得资质”的说法都应保持警惕。
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>分数高就代表可以教别人了吗？</summary>
+          <div class="answer">
+            不能这样推论。教学能力除了技术本身，还包括风险识别、沟通表达、应急处理和责任心，这些很难完全通过自评分数体现。即便自评结果处于较高分段，也建议在有经验的指导下逐步积累教学经验。
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>不同版本的题目不一样，该以哪个为准？</summary>
+          <div class="answer">
+            没有唯一标准。与其纠结版本，不如关注清单是否覆盖了绳材认知、基础手法、受力控制、沟通共识、风险应对和结构规划这几个核心方面。覆盖得越全面，参考价值越高。
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>可以只练造型、不关注安全内容吗？</summary>
+          <div class="answer">
+            不建议。绳缚涉及真实的身体受力，安全知识不是可选项。忽略安全内容不仅影响自评结果的准确性，更重要的是会显著增加练习中的风险。
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>多久重测一次比较合适？</summary>
+          <div class="answer">
+            这取决于练习频率。如果保持稳定练习，可以每隔一段时间重测一次，重点观察趋势而不是单次分数。如果长时间没有练习，重测前建议先恢复基础手感。
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>自评结果需要告诉练习伙伴吗？</summary>
+          <div class="answer">
+            建议主动、如实地沟通自己的实际能力范围，尤其是尚不熟练的部分。让对方了解你的水平，有助于共同选择合适的练习内容，也是负责任的表现。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4>关于本页</h4>
+        <p>
+          本页围绕“绳师48号测试”这一自评概念，整理其结构逻辑、等级参考、自评维度与安全注意事项，供成年爱好者在合法合规、知情自愿的前提下参考。内容不构成认证、教学承诺或专业医疗建议。
+        </p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#intro">测试概览</a></li>
+          <li><a href="#levels">等级参考</a></li>
+          <li><a href="#dimensions">自评维度</a></li>
+          <li><a href="#howto">自测流程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全相关</h4>
+        <ul>
+          <li><a href="#safety">安全须知</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#dimensions">风险识别维度</a></li>
+          <li><a href="#howto">打分参考档位</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用提醒</h4>
+        <ul>
+          <li>仅限成年人参考</li>
+          <li>需知情自愿参与</li>
+          <li>安全优先于技巧</li>
+          <li>有疑问寻求线下指导</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>绳师48号测试 · 技术自评与等级参考指南</span>
+      <span>请始终把安全与共识放在技术之前</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.main-nav a');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href');
+    if(id && id.charAt(0) === '#'){
+      var el = document.querySelector(id);
+      if(el){ sections.push({link:a, el:el}); }
+    }
+  });
+  if(!sections.length) return;
+
+  function onScroll(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(item){
+      if(item.el.offsetTop <= pos){ current = item; }
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current){ current.link.classList.add('active'); }
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+  </html>
